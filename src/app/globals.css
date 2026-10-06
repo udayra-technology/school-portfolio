@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ─── Custom Design Tokens ─────────────────────────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-display: "Outfit", sans-serif;
+  --font-sans:    "Plus Jakarta Sans", sans-serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  /* Brand Palette */
+  --color-paper:         #FBF9F5;
+  --color-oxford:        #0B1320;
+  --color-oxford-90:     rgba(11, 19, 32, 0.9);
+  --color-terracotta:    #D95338;
+  --color-terracotta-dark: #C04325;
+  --color-cream:         #F3ECE2;
+  --color-sage:          #2D5A4C;
+  --color-steel:         #7A8899;
+  --color-mist:          #A8B0B9;
+  --color-gold:          #C09E3E;
+}
+
+/* ─── Base Styles ──────────────────────────────────────────────────────────── */
+*, ::before, ::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-oxford);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 3px;
+}
+
+/* ─── Marquee Animation ────────────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 46s linear infinite;
+}
+
+/* ─── Noise Overlay ────────────────────────────────────────────────────────── */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ─── Watermark Text ───────────────────────────────────────────────────────── */
+.text-watermark {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(251, 249, 245, 0.13);
+}
+
+/* ─── Ping animation ───────────────────────────────────────────────────────── */
+@keyframes ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ─── Typography helpers ───────────────────────────────────────────────────── */
+.font-display { font-family: var(--font-display); }
+.font-sans    { font-family: var(--font-sans); }
+.font-mono    { font-family: var(--font-mono); }
