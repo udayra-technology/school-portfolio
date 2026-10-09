@@ -5,10 +5,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  MessageCircle,
   Sparkles,
   CheckCircle2,
-  Send,
 } from "lucide-react";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
@@ -18,16 +16,16 @@ import { Reveal } from "@/components/landing/Reveal";
 
 const CONTACT_FAQS = [
   {
-    question: "Where are Scholarix OS implementation teams based?",
-    answer: "Our central headquarters is in New Delhi, with regional implementation and field support specialists stationed across NCR, Mumbai, Bengaluru, Hyderabad, and Chandigarh.",
+    question: "How do we reach you?",
+    answer: "Use the form on this page. We reply by email.",
   },
   {
-    question: "How fast can our school get customer support during school hours?",
-    answer: "Institutional clients receive priority 15-minute response times for critical ticketing between 7:30 AM and 5:30 PM Monday through Saturday.",
+    question: "How quickly will someone reply?",
+    answer: "We do not publish a response clock. You will hear back by email.",
   },
   {
-    question: "Can we schedule an in-person meeting on our campus?",
-    answer: "Yes. For schools with 500+ students or multi-branch trusts, our regional educational directors conduct in-person leadership presentations on your campus.",
+    question: "Can we see the product first?",
+    answer: "Yes. Book a walkthrough from the demo page. It covers the modules the product includes.",
   },
 ];
 
@@ -73,7 +71,7 @@ export default function ContactPage() {
                     <span className="text-[#D95338]">institution.</span>
                   </h1>
                   <p className="mt-6 text-base leading-relaxed text-[#7A8899]">
-                    Have questions about pricing, CBSE report card compliance, or our migration timeline? Get in touch with our school implementation advisors.
+                    Questions about the workspace or pricing? Use the form. We reply by email.
                   </p>
 
                   <div className="mt-10 space-y-6">
@@ -92,7 +90,7 @@ export default function ContactPage() {
                           contact@scholarix-os.com
                         </a>
                         <p className="text-xs text-[#7A8899]">
-                          Guaranteed response within 2 business hours
+                          We reply by email.
                         </p>
                       </div>
                     </div>
@@ -134,27 +132,18 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* WhatsApp Quick Chat */}
-                    <div className="rounded-2xl border border-green-500/20 bg-green-500/5 p-5">
-                      <div className="flex items-center gap-3">
-                        <MessageCircle className="h-6 w-6 text-green-600" />
-                        <div>
-                          <div className="font-display text-sm font-bold text-[#0B1320]">
-                            Instant WhatsApp Support
-                          </div>
-                          <p className="text-xs text-[#7A8899]">
-                            Chat with our solutions engineer directly on WhatsApp.
-                          </p>
-                        </div>
-                      </div>
+                    <div className="rounded-2xl border border-black/5 bg-[#F3ECE2] p-5">
+                      <p className="font-display text-sm font-bold text-[#0B1320]">
+                        Prefer a walkthrough?
+                      </p>
+                      <p className="mt-1 text-xs text-[#7A8899]">
+                        Book a demo of the modules this workspace includes.
+                      </p>
                       <a
-                        href="https://wa.me/919876543210"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 inline-flex items-center gap-2 rounded-full bg-green-600 px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all hover:bg-green-700"
+                        href="/demo"
+                        className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#0B1320] px-5 py-2.5 text-xs font-semibold text-white"
                       >
-                        <span>Open WhatsApp Chat</span>
-                        <Send className="h-3 w-3" />
+                        <span>Book a walkthrough</span>
                       </a>
                     </div>
                   </div>

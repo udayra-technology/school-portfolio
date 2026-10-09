@@ -8,16 +8,10 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { CirclePlay, ArrowRight, ScanFace } from "lucide-react";
+import { CirclePlay, ArrowRight } from "lucide-react";
 import { LogoMark } from "./Logo";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-const STATS = [
-  { value: "450+",   label: "K-12 academies"  },
-  { value: "99.98%", label: "System uptime"   },
-  { value: "4.9/5",  label: "Admin rating"    },
-];
 
 function MaskedLine({
   children,
@@ -108,9 +102,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.6, ease: EASE }}
             className="mt-6 max-w-xl text-base leading-relaxed text-[#7A8899] sm:text-lg"
           >
-            Unify administrative workflows, attendance tracking, AI timetabling,
-            and parent communication in one ultra-sleek, institutional-grade
-            command center.
+            People, classes, attendance, a timetable you fill in, exams,
+            report cards, and fees — for admin, teachers, students, and parents.
           </motion.p>
 
           {/* CTAs */}
@@ -124,7 +117,7 @@ export default function Hero() {
               onClick={() => scrollToId("#contact")}
               className="group flex items-center gap-2 rounded-full bg-[#0B1320] px-7 py-3.5 text-sm font-semibold text-[#FBF9F5] transition-all duration-200 hover:bg-[#D95338] hover:shadow-lg active:scale-95"
             >
-              Start 30-Day Free Trial
+              Talk to us
               <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
             </button>
             <button
@@ -136,25 +129,6 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.dl
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.95 }}
-            className="mt-12 flex flex-wrap gap-10"
-          >
-            {STATS.map((s) => (
-              <div key={s.label}>
-                <dt className="sr-only">{s.label}</dt>
-                <dd className="font-mono text-2xl font-semibold text-[#0B1320]">
-                  {s.value}
-                </dd>
-                <dd className="mt-1 text-xs uppercase tracking-wider text-[#A8B0B9]">
-                  {s.label}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
         </div>
 
         {/* Right: 3-D image card */}
@@ -222,12 +196,11 @@ export default function Hero() {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#C09E3E]" />
               </span>
               <div>
-                <p className="flex items-center gap-1.5 text-xs font-semibold text-[#FBF9F5]">
-                  <ScanFace className="h-3.5 w-3.5 text-[#C09E3E]" />
-                  {" "}Attendance synced
+                <p className="text-xs font-semibold text-[#FBF9F5]">
+                  Today&apos;s attendance
                 </p>
                 <p className="font-mono text-[10px] tracking-widest text-[#A8B0B9]">
-                  1,842 / 1,866 PRESENT
+                  Class roster
                 </p>
               </div>
             </motion.div>

@@ -1,11 +1,12 @@
 "use client";
 
 const ITEMS = [
-  "Trusted by 450+ K-12 Academies",
-  "99.98% System Uptime",
-  "ISO 27001 & FERPA Certified",
-  "Instant Parent Sync",
-  "AI-Powered Timetabling Engine",
+  "Students and teachers",
+  "Daily attendance",
+  "Weekly timetable",
+  "Exams and report cards",
+  "Fees and invoices",
+  "Parent and student view",
 ];
 
 export default function Marquee() {

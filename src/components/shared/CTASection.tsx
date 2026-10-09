@@ -15,7 +15,7 @@ interface CTASectionProps {
 export function CTASection({
   badge = "Transform Your Campus",
   headline = "Ready to Run Your School on One Intelligent Platform?",
-  subheadline = "Join 450+ forward-thinking schools that have simplified attendance, fees, academic grading, and parent engagement with Scholarix OS.",
+  subheadline = "People, attendance, exams, report cards, and fees in one school workspace.",
   primaryCtaText = "Book a Guided Demo",
   primaryCtaHref = "/demo",
   secondaryCtaText = "Explore All Features",
@@ -71,11 +71,11 @@ export function CTASection({
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="h-4 w-4 text-[#2D5A4C]" />
-                Zero setup disruption
+                A walkthrough of the real modules
               </span>
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="h-4 w-4 text-[#C09E3E]" />
-                ISO 27001 &amp; FERPA certified
+                Admin, teacher, student, and parent
               </span>
             </div>
           </Reveal>

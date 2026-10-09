@@ -18,22 +18,22 @@ const NAV_COLUMNS = [
   {
     title: "Core Modules",
     links: [
-      { label: "Admissions CRM", href: "/features/admissions" },
-      { label: "Attendance Matrix", href: "/features/attendance" },
-      { label: "Fee Engine", href: "/features/fees" },
-      { label: "Exams & Results", href: "/features/exams-results" },
-      { label: "AI Timetabler", href: "/features/timetable" },
-      { label: "Fleet Transport", href: "/features/transport" },
+      { label: "Students & teachers", href: "/features/student-management" },
+      { label: "Attendance", href: "/features/attendance" },
+      { label: "Fees", href: "/features/fees" },
+      { label: "Exams & report cards", href: "/features/exams-results" },
+      { label: "Timetable", href: "/features/timetable" },
+      { label: "Parent & student portal", href: "/features/parent-communication" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "Small & Budget Schools", href: "/solutions/small-schools" },
-      { label: "CBSE Schools", href: "/solutions/cbse-schools" },
-      { label: "ICSE / ISC Schools", href: "/solutions/icse-schools" },
-      { label: "State Board Schools", href: "/solutions/state-board-schools" },
-      { label: "Multi-Campus Groups", href: "/solutions/multi-campus-schools" },
+      { label: "Smaller schools", href: "/solutions/small-schools" },
+      { label: "Term-based schools", href: "/solutions/cbse-schools" },
+      { label: "Schools with streams", href: "/solutions/icse-schools" },
+      { label: "Your own labels", href: "/solutions/state-board-schools" },
+      { label: "One school, one site", href: "/solutions/multi-campus-schools" },
     ],
   },
   {
@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="mt-6 flex flex-col items-start justify-between gap-4 text-xs text-[#7A8899] sm:flex-row sm:items-center">
           <p>&copy; 2026 Scholarix OS. All rights reserved.</p>
           <p className="font-mono text-[11px] uppercase tracking-widest text-[#7A8899]">
-            FERPA &middot; ISO 27001 &middot; SOC 2 TYPE II
+            One school &middot; its own site
           </p>
         </div>
 

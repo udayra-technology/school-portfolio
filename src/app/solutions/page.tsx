@@ -28,86 +28,88 @@ import { SOLUTIONS } from "@/data/solutions";
 import { ROLES } from "@/data/roles";
 
 export const metadata: Metadata = {
-  title: "School ERP Solutions by Institution Type & Role — Scholarix OS",
+  title: "School Workspaces by School and Role — Scholarix OS",
   description:
-    "Tailored school management software for Small Schools, CBSE, ICSE, State Boards, Multi-Campus Chains, and dedicated portals for Principals, Teachers, Parents, and Admins.",
+    "The same school workspace for classes, attendance, exams, report cards, and fees, described for different schools and roles.",
   keywords:
-    "school ERP solutions, CBSE school management, ICSE school software, multi-campus school ERP, school ERP for small schools, ERP for principals",
+    "school management software, school attendance, school fees, report cards, parent portal",
   alternates: {
     canonical: "https://scholarix-os.com/solutions",
   },
   openGraph: {
-    title: "School ERP Solutions by Institution Type & Role — Scholarix OS",
+    title: "School Workspaces by School and Role — Scholarix OS",
     description:
-      "Explore customized school management solutions built for your board affiliation, campus scale, and everyday role responsibilities.",
+      "The same school workspace, described for different schools and for admin, teachers, and parents.",
     url: "https://scholarix-os.com/solutions",
     type: "website",
   },
 };
 
+const SAME = "Included for this school";
+
 const COMPARISON_ROWS = [
   {
-    capability: "Setup & Onboarding Time",
-    small: "48-Hour Rapid Launch",
-    cbse: "1-2 Weeks (Academic Blueprinting)",
-    icse: "1-2 Weeks (Group Configurations)",
-    state: "3-5 Days (Regional Grading Setup)",
-    multi: "Enterprise Phased Rollout",
+    capability: "People, classes, and the year",
+    small: SAME,
+    cbse: SAME,
+    icse: SAME,
+    state: SAME,
+    multi: "This school only",
   },
   {
-    capability: "Assessment & Exam Engine",
-    small: "Simple Gradebook & Term Printouts",
-    cbse: "Periodic Tests + Co-Scholastic Rubrics",
-    icse: "Bifurcated Papers & 20% Project Work",
-    state: "Customizable State Scale & Grace Marks",
-    multi: "Standardized Multi-Branch Blueprints",
+    capability: "Assessments, grades, and report cards",
+    small: SAME,
+    cbse: "Your terms and grading scheme",
+    icse: "Your streams, sections, and template",
+    state: "Your labels and grading scheme",
+    multi: "This school only",
   },
   {
-    capability: "Attendance & Compliance Alerts",
-    small: "15-Sec Roll Call + Absent SMS",
-    cbse: "75% Mandatory Board Alert Pulse",
-    icse: "Subject-Wise & Minimum Attendance Logs",
-    state: "Muster Rolls & Official General Registers",
-    multi: "Consolidated Cross-Branch Headcounts",
+    capability: "Daily attendance and a cutoff you set",
+    small: SAME,
+    cbse: SAME,
+    icse: SAME,
+    state: SAME,
+    multi: "This school only",
   },
   {
-    capability: "Fee Collection & Accounting",
-    small: "Instant WhatsApp UPI & Direct Receipts",
-    cbse: "Term/Quarterly Billing & Concessions",
-    icse: "Flexible Installment & Sibling Ledgers",
-    state: "RTE & Government Scholarship Ledgers",
-    multi: "Trust-Level Consolidation & Aging BI",
+    capability: "Fees: structure, invoices, recorded payments",
+    small: SAME,
+    cbse: SAME,
+    icse: SAME,
+    state: SAME,
+    multi: "Not combined across schools",
   },
   {
-    capability: "Access Control & Security",
-    small: "Simplified 2-Level Access",
-    cbse: "Role-Based Academic & Exam Locking",
-    icse: "Departmental & Examiner Permissions",
-    state: "Bilingual Administrative Portals",
-    multi: "Campus-Isolated Tenant RBAC & Audit Trails",
+    capability: "Roles for admin, teacher, student, and parent",
+    small: SAME,
+    cbse: SAME,
+    icse: SAME,
+    state: SAME,
+    multi: "This school's roles only",
   },
 ];
 
 const OVERVIEW_FAQS = [
   {
-    question: "How does Scholarix OS tailor itself to our specific board or school size?",
+    question: "Does each kind of school get a different product?",
     answer:
-      "Scholarix OS is modular and highly configurable. During initial onboarding, our system configures your grading schemas, report card formats, fee structures, and attendance rules to reflect your institution's exact requirements without custom coding.",
+      "No. Every school gets the same workspace: people, classes, attendance, timetable, exams, report cards, and fees. You configure years, grades, the report card template, and the words on the screen.",
   },
   {
-    question: "Can we switch or upgrade our solution tier as our institution grows?",
+    question: "Can one login run several campuses?",
     answer:
-      "Yes. If you start as a single small academy and later expand to multiple branches or add secondary classes with board-specific evaluation patterns, your existing data seamlessly scales with zero migration friction.",
+      "No. Each school has its own site. Fees and students are not combined across schools.",
   },
   {
-    question: "Do different stakeholders get their own dedicated interfaces?",
+    question: "Do different people see different screens?",
     answer:
-      "Yes. Principals, Teachers, Parents, and Administrative Staff each access tailored interfaces designed specifically for their daily tasks, available across desktop web and mobile apps.",
+      "Yes. Admin, teacher, student, and parent each get a home and a menu for that role.",
   },
   {
-    question: "How do we get started with a customized walkthrough?",
+    question: "How do we see it?",
     answer:
-      "You can book a 1-on-1 guided demonstration. Our product specialists will present a customized simulation using your exact school type, board curriculum, and fee rules.",
+      "Book a demo. We walk through the modules this school workspace actually includes.",
   },
 ];
 
@@ -117,7 +119,7 @@ export default function SolutionsOverviewPage() {
     "@type": "WebPage",
     name: "Scholarix OS Solutions Overview",
     description:
-      "Tailored school management software for Small Schools, CBSE, ICSE, State Boards, Multi-Campus Chains, and dedicated stakeholder roles.",
+      "The same school workspace, described for different schools and for admin, teachers, and parents.",
     url: "https://scholarix-os.com/solutions",
   };
 
@@ -149,9 +151,9 @@ export default function SolutionsOverviewPage() {
                   <span className="text-[#D95338]">Personalized for every role.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-relaxed text-[#7A8899]">
-                  One size never fits all in education. Whether you run a lean growing academy,
-                  a prestigious board-affiliated institution, or a 15-campus educational trust,
-                  Scholarix OS delivers workflows tailored to your operational reality.
+                  The product is the same school workspace. These pages describe it for a smaller school,
+                  a school that uses terms or streams, a school that renames its own labels, and a school
+                  that lives on its own site.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -185,8 +187,7 @@ export default function SolutionsOverviewPage() {
                 Solutions for Every Academic Framework
               </h2>
               <p className="mt-4 text-base text-[#7A8899]">
-                Select your school profile to see how Scholarix OS adapts to your curriculum,
-                administrative team size, and compliance demands.
+                Pick the description closest to your school. The modules behind each page are the same.
               </p>
             </div>
 
@@ -311,8 +312,7 @@ export default function SolutionsOverviewPage() {
                 Compare Solutions Across Key Capabilities
               </h2>
               <p className="mt-4 text-base text-[#7A8899]">
-                See how Scholarix OS tailors core modules to your school&apos;s distinct regulatory,
-                administrative, and technical environment.
+                The columns are the same product. A second campus is another site, not a combined ledger.
               </p>
             </div>
 
@@ -321,11 +321,11 @@ export default function SolutionsOverviewPage() {
                 <thead>
                   <tr className="border-b border-black/10 bg-[#0B1320] text-[#FBF9F5] text-xs font-mono uppercase tracking-wider">
                     <th className="p-4 sm:p-5 font-semibold">Institutional Dimension</th>
-                    <th className="p-4 sm:p-5 font-semibold text-[#C09E3E]">Small Schools</th>
-                    <th className="p-4 sm:p-5 font-semibold">CBSE Schools</th>
-                    <th className="p-4 sm:p-5 font-semibold">ICSE / ISC</th>
-                    <th className="p-4 sm:p-5 font-semibold">State Boards</th>
-                    <th className="p-4 sm:p-5 font-semibold text-[#D95338]">Multi-Campus</th>
+                    <th className="p-4 sm:p-5 font-semibold text-[#C09E3E]">Smaller schools</th>
+                    <th className="p-4 sm:p-5 font-semibold">Term-based</th>
+                    <th className="p-4 sm:p-5 font-semibold">Streams</th>
+                    <th className="p-4 sm:p-5 font-semibold">Your labels</th>
+                    <th className="p-4 sm:p-5 font-semibold text-[#D95338]">One site</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-black/5 text-sm text-[#0B1320]">
@@ -361,7 +361,7 @@ export default function SolutionsOverviewPage() {
         <CTASection
           badge="Tailored Walkthrough"
           headline="Experience Scholarix OS Configured for Your School"
-          subheadline="Book a private 25-minute consultation with our educational software architects. We will demonstrate the exact workflows, fee engines, and report cards relevant to your institution."
+          subheadline="Book a walkthrough of the modules this workspace includes: people, attendance, exams, report cards, and fees."
           primaryCtaText="Book a Custom Demo"
           primaryCtaHref="/demo"
           secondaryCtaText="Contact Sales Team"

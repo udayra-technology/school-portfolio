@@ -362,7 +362,7 @@ export default async function SolutionDetailPage({
                 Institutional Impact
               </span>
               <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0B1320] sm:text-4xl">
-                What Leadership & Staff Say
+                What each role opens
               </h2>
             </div>
 
@@ -376,13 +376,9 @@ export default async function SolutionDetailPage({
                     <span className="font-mono text-xs font-semibold uppercase tracking-wider text-[#2D5A4C]">
                       {item.role}
                     </span>
-                    <blockquote className="mt-4 text-sm font-medium italic text-[#0B1320] leading-relaxed">
-                      &ldquo;{item.quote}&rdquo;
-                    </blockquote>
-                  </div>
-                  <div className="mt-6 border-t border-black/5 pt-4 text-xs text-[#7A8899]">
-                    <span className="font-semibold text-[#0B1320]">Outcome: </span>
-                    {item.benefit}
+                    <p className="mt-4 text-sm leading-relaxed text-[#0B1320]">
+                      {item.benefit}
+                    </p>
                   </div>
                 </div>
               ))}

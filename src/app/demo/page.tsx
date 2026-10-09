@@ -83,7 +83,7 @@ export default function DemoPage() {
                           Zero-Disruption Implementation Roadmap
                         </h3>
                         <p className="text-sm text-[#7A8899]">
-                          Learn how we safely migrate your past student registers and fee ledgers in 7 to 14 days.
+                          See how students, classes, and fees are added. We do not promise a setup clock.
                         </p>
                       </div>
                     </div>
@@ -97,7 +97,7 @@ export default function DemoPage() {
                           Live Q&amp;A with Implementation Specialist
                         </h3>
                         <p className="text-sm text-[#7A8899]">
-                          Ask specific technical questions regarding CBSE compliance, biometric integration, and payment gateways.
+                          Ask about attendance, exams, report cards, and how payments are recorded.
                         </p>
                       </div>
                     </div>
@@ -105,24 +105,9 @@ export default function DemoPage() {
 
                   {/* Trust metrics */}
                   <div className="mt-12 rounded-2xl border border-black/5 bg-white p-6 shadow-sm">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <div className="font-display text-2xl font-bold text-[#0B1320]">
-                          450+
-                        </div>
-                        <div className="text-xs text-[#7A8899]">
-                          K-12 Partner Academies
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-display text-2xl font-bold text-[#0B1320]">
-                          99.98%
-                        </div>
-                        <div className="text-xs text-[#7A8899]">
-                          Verified Uptime SLA
-                        </div>
-                      </div>
-                    </div>
+                    <p className="text-sm leading-relaxed text-[#7A8899]">
+                      The walkthrough covers the modules the product includes: people, attendance, timetable, exams, report cards, and fees.
+                    </p>
                   </div>
                 </Reveal>
               </div>
@@ -140,7 +125,7 @@ export default function DemoPage() {
                           Demo Request Confirmed!
                         </h3>
                         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-[#7A8899]">
-                          Thank you, {form.name || "Principal"}. Our senior educational consultant will reach out via {form.email || "email"} and phone within 2 hours to confirm your calendar slot.
+                          Thank you, {form.name || "there"}. We will reply at {form.email || "the email you gave"} to arrange a walkthrough.
                         </p>
                         <button
                           onClick={() => setSubmitted(false)}

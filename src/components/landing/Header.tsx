@@ -38,28 +38,28 @@ const SOLUTION_ITEMS = [
     category: "By Institution",
     links: [
       {
-        title: "Small & Budget Schools",
-        desc: "Affordable 48-hour setup for growing academies",
+        title: "Smaller schools",
+        desc: "People, attendance, exams, and fees in one workspace",
         href: "/solutions/small-schools",
       },
       {
-        title: "CBSE Schools",
-        desc: "Periodic tests, co-scholastic rubrics & 75% attendance alerts",
+        title: "Term-based schools",
+        desc: "Terms, grading, and an attendance cutoff you set",
         href: "/solutions/cbse-schools",
       },
       {
-        title: "ICSE / ISC Schools",
-        desc: "CISCE subject groups, bifurcated papers & project tracking",
+        title: "Schools with streams",
+        desc: "Streams, sections, subjects, and your report card",
         href: "/solutions/icse-schools",
       },
       {
-        title: "State Board Schools",
-        desc: "Multilingual alerts, RTE quotas & state muster rolls",
+        title: "Your own labels",
+        desc: "Rename the words the school uses on screen",
         href: "/solutions/state-board-schools",
       },
       {
-        title: "Multi-Campus Groups",
-        desc: "Centralized trust command, campus RBAC & consolidated BI",
+        title: "One school, one site",
+        desc: "This site is one school, not a group ledger",
         href: "/solutions/multi-campus-schools",
       },
     ],
@@ -69,22 +69,22 @@ const SOLUTION_ITEMS = [
     links: [
       {
         title: "For Principals",
-        desc: "Morning pulse dashboard, fee velocity & teacher proxies",
+        desc: "Counts, today's attendance, and what is still owed",
         href: "/for-principals",
       },
       {
         title: "For Teachers",
-        desc: "15-second attendance, fast marks entry & quiet hours",
+        desc: "Today's periods, attendance, and marks",
         href: "/for-teachers",
       },
       {
         title: "For Parents",
-        desc: "Live GPS bus tracking, instant UPI fee pay & attendance SMS",
+        desc: "Attendance, results, report cards, and the fee ledger",
         href: "/for-parents",
       },
       {
         title: "For School Admins",
-        desc: "Zero-reconciliation fees, biometric payroll & U-DISE export",
+        desc: "Students, classes, invoices, and the school year",
         href: "/for-school-admins",
       },
     ],
@@ -208,7 +208,7 @@ export default function Header() {
                           <ArrowRight className="h-3 w-3" />
                         </Link>
                         <span className="text-[11px] text-[#7A8899]">
-                          Pre-configured for CBSE, ICSE, State & Chains
+                          Same workspace, your setup
                         </span>
                       </div>
                     </div>
@@ -297,31 +297,31 @@ export default function Header() {
                   href="/solutions/small-schools"
                   className="rounded-lg px-2 py-1.5 text-xs text-[#0B1320] hover:bg-white/60"
                 >
-                  &bull; Small & Budget Schools
+                  &bull; Smaller schools
                 </Link>
                 <Link
                   href="/solutions/cbse-schools"
                   className="rounded-lg px-2 py-1.5 text-xs text-[#0B1320] hover:bg-white/60"
                 >
-                  &bull; CBSE Affiliated Schools
+                  &bull; Term-based schools
                 </Link>
                 <Link
                   href="/solutions/icse-schools"
                   className="rounded-lg px-2 py-1.5 text-xs text-[#0B1320] hover:bg-white/60"
                 >
-                  &bull; ICSE / ISC Schools
+                  &bull; Schools with streams
                 </Link>
                 <Link
                   href="/solutions/state-board-schools"
                   className="rounded-lg px-2 py-1.5 text-xs text-[#0B1320] hover:bg-white/60"
                 >
-                  &bull; State Board Schools
+                  &bull; Your own labels
                 </Link>
                 <Link
                   href="/solutions/multi-campus-schools"
                   className="rounded-lg px-2 py-1.5 text-xs text-[#0B1320] hover:bg-white/60"
                 >
-                  &bull; Multi-Campus Groups
+                  &bull; One school, one site
                 </Link>
               </div>
 

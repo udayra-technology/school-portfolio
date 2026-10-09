@@ -24,7 +24,7 @@ import { Reveal } from "@/components/landing/Reveal";
 export const metadata: Metadata = {
   title: "Scholarix OS Product Overview — One Platform to Run Your Entire School",
   description:
-    "Discover how Scholarix OS connects admissions, attendance, AI timetables, exams, fees, bus tracking, and parent communication into one unified operating system.",
+    "People, classes, attendance, a timetable you fill in, exams, report cards, and fees, with a view for students and parents.",
   keywords:
     "school ERP overview, school management software architecture, unified school platform, K-12 management OS",
   alternates: {
@@ -33,44 +33,42 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Scholarix OS Product Overview — One Platform to Run Your Entire School",
     description:
-      "Eliminate fragmented educational software. Scholarix OS gives school leaders a complete institutional command center.",
+      "One school workspace for people, attendance, exams, report cards, and fees.",
     url: "https://scholarix-os.com/product",
     type: "website",
   },
 };
 
 const MODULES = [
-  { name: "Admissions CRM", desc: "Digital applications & automated merit lists", href: "/features/admissions" },
-  { name: "Student SIS", desc: "360° student lifecycle and academic records", href: "/features/student-management" },
-  { name: "Attendance Matrix", desc: "One-tap roll call with instant parent SMS alerts", href: "/features/attendance" },
-  { name: "Fee Engine", desc: "Zero-reconciliation fee billing and UPI payments", href: "/features/fees" },
-  { name: "Exams & Results", desc: "CBSE/ICSE report card builder and analytics", href: "/features/exams-results" },
-  { name: "AI Timetabler", desc: "Zero-collision master schedules and teacher proxy", href: "/features/timetable" },
-  { name: "Parent Mobile App", desc: "Real-time notices, bus tracking, and grade updates", href: "/features/parent-communication" },
-  { name: "Fleet Transport", desc: "Live GPS bus tracking and attendant boarding manifests", href: "/features/transport" },
-  { name: "Executive Analytics", desc: "Morning attendance pulses and fee aging reports", href: "/features/reports-analytics" },
+  { name: "Students & teachers", desc: "Profiles, photos, bulk add, and promotion", href: "/features/student-management" },
+  { name: "Attendance", desc: "A daily roster and a cutoff the school sets", href: "/features/attendance" },
+  { name: "Fees", desc: "Class structures, invoices, and recorded payments", href: "/features/fees" },
+  { name: "Exams & report cards", desc: "Marks, grades, ranks, and your template", href: "/features/exams-results" },
+  { name: "Timetable", desc: "Period settings and a week you fill in", href: "/features/timetable" },
+  { name: "Parent & student view", desc: "Attendance, results, report cards, and fees", href: "/features/parent-communication" },
+  { name: "School overview", desc: "Today's attendance, outstanding fees, and marks awaiting review", href: "/features/reports-analytics" },
 ];
 
 const FLOW_STEPS = [
   {
     step: "01",
-    title: "Inquiry to Enrollment",
-    desc: "A prospective student applies online. Documents verify digitally, seat fees process via UPI, and the approved applicant seeds the Student Information System instantly.",
+    title: "Set up the year",
+    desc: "Add classes, people, and the fee for each class. Switch years without losing the label when you are not in the active one.",
   },
   {
     step: "02",
-    title: "Classroom Daily Rhythm",
-    desc: "Attendance marked in 15 seconds. Sick leaves trigger parent alerts. Timetable handles sudden teacher sick leaves with automatic qualified substitute suggestions.",
+    title: "Run the day",
+    desc: "Mark attendance for a class. Open the timetable the school filled in. Update syllabus progress.",
   },
   {
     step: "03",
-    title: "Assessments & Grading",
-    desc: "Teachers input exam marks; the calculation engine auto-computes percentiles and rubrics. High-resolution report cards publish to parent apps with QR validation.",
+    title: "Close the assessment",
+    desc: "Enter marks, review them, publish term results and ranks, then generate report cards from your template.",
   },
   {
     step: "04",
-    title: "Trust & Board Governance",
-    desc: "Principals and trustees monitor morning campus pulses, fee collection forecasts, and compliance reports with real-time auditability across every campus.",
+    title: "Families read the same records",
+    desc: "Students and parents open attendance, the week, results, report cards, and the fee ledger.",
   },
 ];
 
@@ -99,7 +97,7 @@ export default function ProductPage() {
                   <span className="text-[#D95338]">entire school.</span>
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#7A8899]">
-                  Scholarix OS unifies admissions, academics, attendance, examinations, fee collection, transport, and parent communication into one single, institutional-grade operating system.
+                  People, classes, attendance, a timetable you fill in, exams, report cards, and fees live in one workspace. Students and parents see their own records.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
@@ -152,7 +150,7 @@ export default function ProductPage() {
                   Why Fragmented School Software Fails Leadership
                 </h2>
                 <p className="mt-3 text-base text-[#7A8899]">
-                  Most schools operate across 4 to 6 disconnected tools: a legacy offline fee package, Excel registers, third-party SMS gateways, and unofficial WhatsApp groups.
+                  Attendance, fees, and report cards are often three separate jobs. This workspace keeps them with the same students and the same year.
                 </p>
               </div>
             </Reveal>
@@ -167,7 +165,7 @@ export default function ProductPage() {
                     Data Desynchronization
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    When a student changes bus routes or pays fees, staff manually re-enter data across multiple systems, creating billing discrepancies and missing records.
+                    A student, their class, their attendance, and their invoice should be the same record. Here they are.
                   </p>
                 </div>
               </Reveal>
@@ -181,7 +179,7 @@ export default function ProductPage() {
                     Teacher Administrative Burnout
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    Educators spend 12+ hours weekly on non-teaching paperwork: calculating marks, tallying attendance percentages, and chasing late fee slips.
+                    Teachers mark attendance, enter marks, and update syllabus progress for the classes they teach.
                   </p>
                 </div>
               </Reveal>
@@ -195,7 +193,7 @@ export default function ProductPage() {
                     Blind Decision-Making
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    Principals and trustees lack real-time visibility into daily attendance pulses, admission conversion velocity, and fee recovery projections.
+                    The admin home shows today's attendance, outstanding fees, marks awaiting review, and students under the cutoff you set.
                   </p>
                 </div>
               </Reveal>
@@ -237,7 +235,7 @@ export default function ProductPage() {
                     </div>
                     <div className="mt-6 flex items-center gap-1.5 text-xs font-semibold text-[#2D5A4C]">
                       <CheckCircle2 className="h-3.5 w-3.5" />
-                      <span>Zero latency sync</span>
+                      <span>Same school records</span>
                     </div>
                   </div>
                 </Reveal>
@@ -322,7 +320,7 @@ export default function ProductPage() {
                     Principals &amp; Trustees
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    District-wide attendance pulses, fee collection forecasts, teacher allocations, and one-click regulatory board exports.
+                    Today's attendance, outstanding fees, marks awaiting review, and students under the cutoff for this school.
                   </p>
                 </div>
               </Reveal>
@@ -336,7 +334,7 @@ export default function ProductPage() {
                     Teachers &amp; Faculty
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    15-second mobile attendance, automated marks rubrics, timetable schedules, homework broadcast, and private messaging.
+                    Today's periods, the attendance roster, marks entry, and syllabus progress.
                   </p>
                 </div>
               </Reveal>
@@ -350,7 +348,7 @@ export default function ProductPage() {
                     Parents &amp; Guardians
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    Morning attendance alerts, instant UPI tuition payments, live GPS bus tracking, digital report cards, and event calendars.
+                    Switch between children. Open attendance, results, report cards, and the fee ledger.
                   </p>
                 </div>
               </Reveal>
@@ -364,7 +362,7 @@ export default function ProductPage() {
                     Students
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#7A8899]">
-                    Daily timetable schedules, assignment submission checklists, library book loans, and personal academic trajectories.
+                    Today's timetable, attendance, upcoming exams, results, report cards, and fees.
                   </p>
                 </div>
               </Reveal>
@@ -397,7 +395,7 @@ export default function ProductPage() {
                         Intelligent Automation
                       </h3>
                       <p className="text-sm text-[#7A8899]">
-                        Fee payment reminders, absence alerts, and timetable substitution alerts fire automatically without staff intervention.
+                        Invoices come from the class fee structure. A reminder can be sent from the outstanding list. The timetable is one you fill in.
                       </p>
                     </div>
                   </div>
@@ -408,10 +406,10 @@ export default function ProductPage() {
                     </div>
                     <div>
                       <h3 className="font-display text-base font-bold text-[#0B1320]">
-                        Native Mobile Apps for iOS &amp; Android
+                        A mobile app for the same screens
                       </h3>
                       <p className="text-sm text-[#7A8899]">
-                        Dedicated, lightweight parent and staff apps with offline sync and instant push notifications.
+                        Staff and families can open the same records in the mobile app: attendance, timetable, academics, fees, and report cards.
                       </p>
                     </div>
                   </div>
@@ -422,10 +420,10 @@ export default function ProductPage() {
                     </div>
                     <div>
                       <h3 className="font-display text-base font-bold text-[#0B1320]">
-                        Enterprise Security &amp; Compliance
+                        Role-based menus
                       </h3>
                       <p className="text-sm text-[#7A8899]">
-                        Encrypted student databases, role-based access control, ISO 27001 standards, and full FERPA alignment.
+                        What a person can open follows their role. A teacher does not see the admin fee desk.
                       </p>
                     </div>
                   </div>
@@ -458,10 +456,10 @@ export default function ProductPage() {
                   Trust &amp; Compliance
                 </span>
                 <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#0B1320]">
-                  Institutional Security You Can Stake Your Reputation On
+                  Access follows the role
                 </h2>
                 <p className="mt-3 text-base text-[#7A8899]">
-                  We maintain bank-grade encryption protocols and rigorous security controls to ensure student records and financial transactions remain confidential.
+                  Admin, teacher, student, and parent each sign in to their own menu. Sign-in is for the school on this address.
                 </p>
               </div>
 
@@ -469,29 +467,29 @@ export default function ProductPage() {
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="h-8 w-8 text-[#2D5A4C]" />
                   <div className="text-left">
-                    <div className="font-display text-base font-bold text-[#0B1320]">ISO 27001</div>
-                    <div className="text-xs text-[#7A8899]">Information Security</div>
+                    <div className="font-display text-base font-bold text-[#0B1320]">Admin</div>
+                    <div className="text-xs text-[#7A8899]">School setup and fees</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="h-8 w-8 text-[#2D5A4C]" />
                   <div className="text-left">
-                    <div className="font-display text-base font-bold text-[#0B1320]">FERPA Compliant</div>
-                    <div className="text-xs text-[#7A8899]">Student Privacy</div>
+                    <div className="font-display text-base font-bold text-[#0B1320]">Teacher</div>
+                    <div className="text-xs text-[#7A8899]">Classes, attendance, marks</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="h-8 w-8 text-[#2D5A4C]" />
                   <div className="text-left">
-                    <div className="font-display text-base font-bold text-[#0B1320]">SOC 2 Type II</div>
-                    <div className="text-xs text-[#7A8899]">Audit Certified</div>
+                    <div className="font-display text-base font-bold text-[#0B1320]">Student</div>
+                    <div className="text-xs text-[#7A8899]">Their own records</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="h-8 w-8 text-[#2D5A4C]" />
                   <div className="text-left">
-                    <div className="font-display text-base font-bold text-[#0B1320]">99.98% Uptime</div>
-                    <div className="text-xs text-[#7A8899]">High-Availability SLA</div>
+                    <div className="font-display text-base font-bold text-[#0B1320]">Parent</div>
+                    <div className="text-xs text-[#7A8899]">Each child they can open</div>
                   </div>
                 </div>
               </div>

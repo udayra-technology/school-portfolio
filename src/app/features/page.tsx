@@ -6,16 +6,10 @@ import {
   BookOpen,
   CalendarCheck,
   CreditCard,
-  FileSpreadsheet,
   Clock,
   MessageSquare,
-  Bus,
   Users,
-  Library,
-  FileCheck2,
   BarChart3,
-  UserCheck,
-  ShieldAlert,
   Sparkles,
 } from "lucide-react";
 import Header from "@/components/landing/Header";
@@ -26,37 +20,31 @@ import { Reveal } from "@/components/landing/Reveal";
 import { FEATURES, FEATURE_CATEGORIES } from "@/data/features";
 
 export const metadata: Metadata = {
-  title: "School ERP Features & Modules Directory — Scholarix OS",
+  title: "School Workspace Features — Scholarix OS",
   description:
-    "Explore the complete institutional suite of Scholarix OS: Admissions, Student Management, Attendance, Fees, Exams, Timetables, Parent App, Bus Tracking, and Reports.",
+    "Students, attendance, timetable, exams, report cards, fees, and a parent view of those records.",
   keywords:
-    "school ERP features, school management system modules, attendance software, fee management, AI timetable, parent communication app",
+    "school management features, attendance, school fees, report cards, school timetable, parent portal",
   alternates: {
     canonical: "https://scholarix-os.com/features",
   },
   openGraph: {
-    title: "School ERP Features & Modules Directory — Scholarix OS",
+    title: "School Workspace Features — Scholarix OS",
     description:
-      "Explore all capabilities of Scholarix OS. Everything your school needs to run seamlessly in one unified platform.",
+      "Students, attendance, timetable, exams, report cards, fees, and a parent view of those records.",
     url: "https://scholarix-os.com/features",
     type: "website",
   },
 };
 
 const ICONS: Record<string, React.ElementType> = {
-  admissions: FileSpreadsheet,
   attendance: CalendarCheck,
   fees: CreditCard,
   "exams-results": BookOpen,
   timetable: Clock,
   "parent-communication": MessageSquare,
-  transport: Bus,
   "student-management": Users,
-  library: Library,
-  homework: FileCheck2,
   "reports-analytics": BarChart3,
-  "hr-payroll": UserCheck,
-  "visitor-management": ShieldAlert,
 };
 
 export default function FeaturesHubPage() {
@@ -84,10 +72,8 @@ export default function FeaturesHubPage() {
                   <span className="text-[#D95338]">In one place.</span>
                 </h1>
                 <p className="mt-6 text-lg leading-relaxed text-[#7A8899]">
-                  Scholarix OS eliminates disconnected software silos. Browse our
-                  comprehensive catalog of interconnected modules designed for
-                  modern K-12 academies, international schools, and multi-campus
-                  districts.
+                  The modules in this school workspace: people, attendance,
+                  timetable, exams, report cards, fees, and the family view.
                 </p>
 
                 <div className="mt-8 flex flex-wrap items-center gap-4">

@@ -21,11 +21,11 @@ const SHOTS: Shot[] = [
     id: "dashboard",
     label: "Dashboard Command",
     img: "/images/dashboard.jpeg",
-    alt: "Scholarix OS dashboard command center with live school analytics",
-    caption: "Morning brief: enrollment, attendance pulse and fee collection in one glance.",
+    alt: "Scholarix OS admin home for the school",
+    caption: "Admin home: today's attendance, outstanding fees, and what needs a decision.",
     hotspots: [
-      { x: "22%", y: "30%", label: "Live attendance feed" },
-      { x: "66%", y: "55%", label: "Fee collection pulse" },
+      { x: "22%", y: "30%", label: "Today's attendance" },
+      { x: "66%", y: "55%", label: "Needs attention" },
     ],
   },
   {
@@ -33,10 +33,10 @@ const SHOTS: Shot[] = [
     label: "Attendance Matrix",
     img: "/images/attendance.jpeg",
     alt: "Teacher marking attendance on a tablet with the Scholarix attendance matrix",
-    caption: "One tap per class. Parents notified before the bell finishes ringing.",
+    caption: "A class roster for the day: present, absent, late, or leave.",
     hotspots: [
-      { x: "40%", y: "38%", label: "One-tap class scan" },
-      { x: "74%", y: "66%", label: "Instant parent SMS" },
+      { x: "40%", y: "38%", label: "Class roster" },
+      { x: "74%", y: "66%", label: "Saved draft" },
     ],
   },
   {
@@ -44,10 +44,10 @@ const SHOTS: Shot[] = [
     label: "Report Card Builder",
     img: "/images/reportCardBuilder.jpeg",
     alt: "Student reviewing a digital report card built with Scholarix OS",
-    caption: "Narrative remarks, rubrics and trajectories assembled automatically.",
+    caption: "Report cards generated from published term results, using the school's template.",
     hotspots: [
-      { x: "30%", y: "44%", label: "AI remark drafts" },
-      { x: "62%", y: "28%", label: "Grade trajectory" },
+      { x: "30%", y: "44%", label: "School template" },
+      { x: "62%", y: "28%", label: "Marks and grade" },
     ],
   },
   {
@@ -55,10 +55,10 @@ const SHOTS: Shot[] = [
     label: "Mobile Parent App",
     img: "/images/mobile.jpeg",
     alt: "Parent using the Scholarix mobile app to follow their child's school day",
-    caption: "Grades, fees, bus tracking and teacher messages — in every parent's pocket.",
+    caption: "Parents and students open attendance, results, report cards, and the fee ledger.",
     hotspots: [
-      { x: "26%", y: "60%", label: "Real-time alerts" },
-      { x: "70%", y: "40%", label: "In-app fee payment" },
+      { x: "26%", y: "60%", label: "Child's records" },
+      { x: "70%", y: "40%", label: "Fee ledger" },
     ],
   },
 ];

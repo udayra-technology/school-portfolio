@@ -4,18 +4,18 @@ import { getRoleBySlug } from "@/data/roles";
 import { RolePageTemplate } from "@/components/shared/RolePageTemplate";
 
 export const metadata: Metadata = {
-  title: "School ERP for Teachers — 15-Second Attendance, Easy Marks & Homework",
+  title: "Attendance, Marks, and Timetable for Teachers — Scholarix OS",
   description:
-    "Reclaim your teaching hours. Scholarix OS gives teachers 15-second mobile attendance roll calls, spreadsheet-like gradebooks, digital homework distribution, and private parent messaging.",
+    "Teachers see today's periods, mark attendance, enter marks, and follow syllabus progress for their classes.",
   keywords:
-    "school ERP for teachers, teacher attendance app, classroom management software, marks entry portal, homework sharing",
+    "teacher attendance, school marks entry, teacher timetable, syllabus progress",
   alternates: {
     canonical: "https://scholarix-os.com/for-teachers",
   },
   openGraph: {
-    title: "School ERP for Teachers — 15-Second Attendance, Easy Marks & Homework",
+    title: "Attendance, Marks, and Timetable for Teachers — Scholarix OS",
     description:
-      "Spend time inspiring students, not wrestling with paperwork. The ultimate digital workspace designed by educators for educators.",
+      "Today's periods, the class roster, marks waiting to be entered, and syllabus progress.",
     url: "https://scholarix-os.com/for-teachers",
     type: "website",
   },

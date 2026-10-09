@@ -4,18 +4,18 @@ import { getRoleBySlug } from "@/data/roles";
 import { RolePageTemplate } from "@/components/shared/RolePageTemplate";
 
 export const metadata: Metadata = {
-  title: "School ERP for Principals & Directors — Real-Time Campus Intelligence",
+  title: "School Overview for Principals — Scholarix OS",
   description:
-    "Empower school leadership. Scholarix OS gives principals real-time morning attendance pulses, fee collection velocity, automated teacher substitute rosters, and academic analytics.",
+    "A principal's home with today's attendance, outstanding fees, marks awaiting review, and the items that still need a decision.",
   keywords:
-    "school ERP for principals, principal dashboard, school leadership management software, teacher proxy matrix",
+    "school dashboard for principals, school attendance overview, school fee overview",
   alternates: {
     canonical: "https://scholarix-os.com/for-principals",
   },
   openGraph: {
-    title: "School ERP for Principals & Directors — Real-Time Campus Intelligence",
+    title: "School Overview for Principals — Scholarix OS",
     description:
-      "Stop waiting for paper summaries. Scholarix OS puts real-time attendance, fee velocity, and academic health directly into your executive cockpit.",
+      "Today's attendance, outstanding fees, marks awaiting review, and students under the cutoff for this school.",
     url: "https://scholarix-os.com/for-principals",
     type: "website",
   },

@@ -18,51 +18,51 @@ interface Lens {
 const LENSES: Lens[] = [
   {
     id: "administrator",
-    label: "Administrator View",
+    label: "Admin",
     icon: Gauge,
-    heading: "Command-center oversight for the whole institution.",
+    heading: "The school you are signed into.",
     bullets: [
-      "District-wide analytics in real time",
-      "Enrollment, staff & compliance records",
-      "One-click regulatory reporting",
+      "Today's attendance, and which sections have not submitted",
+      "Outstanding fees and marks awaiting review",
+      "Students under the cutoff, syllabus progress, and leave waiting",
     ],
-    stat: "3 hrs saved daily per admin",
+    stat: "This school's home",
   },
   {
     id: "teacher",
-    label: "Teacher Desk",
+    label: "Teacher",
     icon: BookOpenCheck,
-    heading: "Less paperwork. More teaching.",
+    heading: "The classes you teach.",
     bullets: [
-      "One-tap attendance from any device",
-      "AI-assisted grading & rubrics",
-      "Lesson planner synced to timetable",
+      "Today's periods from the weekly timetable",
+      "Attendance still to mark, with a saved draft",
+      "Marks waiting, and syllabus progress",
     ],
-    stat: "42% less administrative work",
+    stat: "Your classes",
   },
   {
     id: "parent",
-    label: "Parent Portal",
+    label: "Parent",
     icon: Users,
-    heading: "Every parent, always in the loop.",
+    heading: "Each child, from one sign-in.",
     bullets: [
-      "Real-time attendance & grade alerts",
-      "Fee payments with instant receipts",
-      "Direct, translated teacher messaging",
+      "Switch between children",
+      "Attendance, timetable, results, and report cards",
+      "The fee ledger for the child you picked",
     ],
-    stat: "9/10 parents engaged weekly",
+    stat: "Your children",
   },
   {
     id: "student",
-    label: "Student Workspace",
+    label: "Student",
     icon: GraduationCap,
-    heading: "A workspace students actually open.",
+    heading: "Your own attendance, week, and results.",
     bullets: [
-      "Timetable, assignments & deadlines",
-      "Personal grade trajectory",
-      "Club, event & exam signups",
+      "This month's attendance and a leave request",
+      "Today's timetable and upcoming exams",
+      "Results, report cards, syllabus progress, and fees",
     ],
-    stat: "24/7 access on any device",
+    stat: "Your records",
   },
 ];
 
@@ -157,7 +157,7 @@ export default function Lenses() {
             {/* Stat card */}
             <div className="flex flex-col justify-center rounded-2xl bg-[#F3ECE2] p-8">
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#D95338]">
-                Measured Impact
+                What they open
               </p>
               <p className="mt-3 font-display text-2xl font-bold tracking-tight text-[#0B1320]">
                 {active.stat}

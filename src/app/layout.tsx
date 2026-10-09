@@ -26,15 +26,15 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Scholarix OS — School Management Software for Modern Institutions",
   description:
-    "Scholarix OS unifies attendance, AI timetabling, grading, fee management and parent communication into one institutional-grade command center for K-12 schools and districts.",
+    "People, classes, attendance, a timetable you fill in, exams, report cards, and fees for one school.",
   keywords:
-    "school management software, school ERP, attendance tracking, AI timetabling, parent portal, fee management, K-12 SaaS",
+    "school management software, school attendance, school fees, report cards, parent portal",
   authors: [{ name: "Scholarix OS" }],
   openGraph: {
     type: "website",
     title: "Scholarix OS — The Operating System Built for Tomorrow's Schools",
     description:
-      "Unify administrative workflows, attendance tracking, AI timetabling, and parent communication in one ultra-sleek, institutional-grade command center.",
+      "People, classes, attendance, exams, report cards, and fees for one school.",
     siteName: "Scholarix OS",
   },
   twitter: {

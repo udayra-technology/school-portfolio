@@ -19,52 +19,24 @@ interface Tier {
   dark: boolean;
 }
 
+const INCLUDED = [
+  "Students, teachers, and classes",
+  "Daily attendance and a timetable you fill in",
+  "Exams, marks, and report cards",
+  "Fee structures, invoices, and recorded payments",
+  "Student and parent views",
+];
+
 const TIERS: Tier[] = [
   {
-    id: "standard",
-    name: "Standard Academy",
-    price: "$299",
-    period: "/mo",
-    badge: "Essential",
-    target: "Up to 500 students",
-    features: [
-      "Attendance & gradebooks",
-      "Parent portal & messaging",
-      "Fee invoicing & receipts",
-      "Standard support",
-    ],
-    dark: false,
-  },
-  {
-    id: "growth",
-    name: "Growth Campus",
-    price: "$599",
-    period: "/mo",
-    badge: "Most Popular",
-    target: "Up to 2,000 students",
-    features: [
-      "Everything in Standard",
-      "AI timetabling engine",
-      "Predictive grade analytics",
-      "Biometric / NFC check-in",
-      "Priority 24/7 support",
-    ],
-    dark: true,
-  },
-  {
-    id: "enterprise",
-    name: "Institutional Enterprise",
+    id: "school",
+    name: "Your school",
     price: "Custom",
     period: "",
-    badge: "Multi-Campus",
-    target: "Unlimited districts",
-    features: [
-      "Everything in Growth",
-      "Multi-campus command view",
-      "SIS & SSO integrations",
-      "Dedicated success engineer",
-    ],
-    dark: false,
+    badge: "Talk to us",
+    target: "One school on its own site",
+    features: INCLUDED,
+    dark: true,
   },
 ];
 
@@ -84,15 +56,14 @@ export default function Pricing() {
             id="pricing-heading"
             className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight tracking-tight text-[#0B1320] sm:text-4xl lg:text-5xl"
           >
-            Priced per campus. Not per headache.
+            Pricing is discussed for your school.
           </h2>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-[#7A8899]">
-            Every tier includes unlimited staff accounts, data migration and a
-            30-day free trial.
+            The workspace below is what the product includes. We do not publish a rate here.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 lg:grid-cols-1 lg:max-w-xl">
           {TIERS.map((t, i) => (
             <Reveal key={t.id} delay={i * 0.08} className="h-full">
               <article
@@ -170,7 +141,7 @@ export default function Pricing() {
                       : "border border-[#0B1320]/15 text-[#0B1320] hover:border-[#0B1320] hover:bg-[#0B1320] hover:text-[#FBF9F5]"
                   }`}
                 >
-                  {t.id === "enterprise" ? "Talk to Sales" : "Start Free Trial"}
+                  Talk to us
                 </button>
               </article>
             </Reveal>

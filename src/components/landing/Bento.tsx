@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CalendarClock, Fingerprint, Landmark, ChartLine } from "lucide-react";
+import { CalendarClock, ClipboardCheck, Landmark, LayoutDashboard } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const CARD =
@@ -9,9 +9,9 @@ const CARD =
 const BARS = [38, 55, 44, 70, 62, 84, 76, 95];
 
 const FEE_ITEMS = [
-  { label: "Tuition Fee", amount: "₹ 45,000", status: "Paid" },
-  { label: "Activity Fee", amount: "₹ 8,500", status: "Pending" },
-  { label: "Transport",   amount: "₹ 12,000", status: "Paid"    },
+  { label: "Admission", status: "Recorded" },
+  { label: "Monthly", status: "Open" },
+  { label: "Transport", status: "Recorded" },
 ];
 
 export default function Bento() {
@@ -43,16 +43,13 @@ export default function Bento() {
                   <CalendarClock className="h-5 w-5 text-[#D95338]" />
                 </span>
                 <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-[#0B1320] sm:text-2xl">
-                  Automated Timetabling AI
+                  Weekly timetable
                 </h3>
                 <p className="mt-2 max-w-md text-base leading-relaxed text-[#7A8899]">
-                  Resolves teacher loads, room conflicts and elective preferences
-                  into a conflict-free master schedule.
+                  Set the day&apos;s periods, then fill the week. Teachers, students,
+                  and parents open the same grid.
                 </p>
               </div>
-              <span className="hidden shrink-0 rounded-full bg-[#0B1320] px-4 py-1.5 font-mono text-[11px] font-semibold tracking-wider text-[#FBF9F5] sm:block">
-                1,400 constraints · 2.8s
-              </span>
             </div>
 
             {/* Timetable grid visualisation */}
@@ -81,37 +78,20 @@ export default function Bento() {
         <Reveal delay={0.08} className="col-span-12 lg:col-span-4">
           <article className={`${CARD} h-full`}>
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#2D5A4C]/10">
-              <Fingerprint className="h-5 w-5 text-[#2D5A4C]" />
+              <ClipboardCheck className="h-5 w-5 text-[#2D5A4C]" />
             </span>
             <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-[#0B1320] sm:text-2xl">
-              Biometric &amp; NFC Attendance
+              Daily attendance
             </h3>
             <p className="mt-2 text-base leading-relaxed text-[#7A8899]">
-              Instant RFID scans with automatic parent SMS alerts.
+              Mark a class as present, absent, late, or leave. Students under the cutoff you set appear on the at-risk list.
             </p>
 
-            {/* Animated donut */}
-            <div className="mt-8 flex items-center gap-5">
-              <svg viewBox="0 0 80 80" className="h-20 w-20 -rotate-90" aria-hidden="true">
-                <circle cx="40" cy="40" r="34" fill="none" stroke="#F3ECE2" strokeWidth="8" />
-                <motion.circle
-                  cx="40" cy="40" r="34" fill="none"
-                  stroke="#2D5A4C" strokeWidth="8"
-                  strokeLinecap="round"
-                  strokeDasharray="213.6"
-                  initial={{ strokeDashoffset: 213.6 }}
-                  whileInView={{ strokeDashoffset: 213.6 * (1 - 0.987) }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                />
-              </svg>
-              <div>
-                <p className="font-mono text-2xl font-semibold text-[#0B1320]">98.7%</p>
-                <p className="text-xs uppercase tracking-wider text-[#A8B0B9]">
-                  Present today · SMS in 4s
-                </p>
-              </div>
-            </div>
+            <ul className="mt-8 space-y-2 text-sm text-[#7A8899]">
+              <li>Saved draft before submit</li>
+              <li>Monthly export for families</li>
+              <li>Leave request from the family view</li>
+            </ul>
           </article>
         </Reveal>
 
@@ -122,10 +102,10 @@ export default function Bento() {
               <Landmark className="h-5 w-5 text-[#C09E3E]" />
             </span>
             <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-[#0B1320] sm:text-2xl">
-              Smart Fee &amp; Ledger Hub
+              Class fees and invoices
             </h3>
             <p className="mt-2 text-base leading-relaxed text-[#7A8899]">
-              Automated billing, reminders, and payment-gateway sync.
+              Admission, monthly, and transport. Record a payment and see what is still owed.
             </p>
             <ul className="mt-7 space-y-2.5" aria-hidden="true">
               {FEE_ITEMS.map((f) => (
@@ -134,19 +114,14 @@ export default function Bento() {
                   className="flex items-center justify-between rounded-xl bg-[#F3ECE2] px-4 py-3 text-sm"
                 >
                   <span className="font-medium text-[#0B1320]">{f.label}</span>
-                  <span className="flex items-center gap-2">
-                    <span className="font-mono font-semibold text-[#0B1320]">
-                      {f.amount}
-                    </span>
-                    <span
-                      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
-                        f.status === "Paid"
-                          ? "bg-[#2D5A4C]/15 text-[#2D5A4C]"
-                          : "bg-[#D95338]/15 text-[#D95338]"
-                      }`}
-                    >
-                      {f.status}
-                    </span>
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${
+                      f.status === "Recorded"
+                        ? "bg-[#2D5A4C]/15 text-[#2D5A4C]"
+                        : "bg-[#D95338]/15 text-[#D95338]"
+                    }`}
+                  >
+                    {f.status}
                   </span>
                 </li>
               ))}
@@ -160,19 +135,16 @@ export default function Bento() {
             <div className="flex items-start justify-between gap-6">
               <div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0B1320]/5">
-                  <ChartLine className="h-5 w-5 text-[#0B1320]" />
+                  <LayoutDashboard className="h-5 w-5 text-[#0B1320]" />
                 </span>
                 <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-[#0B1320] sm:text-2xl">
-                  Live Academic Analytics
+                  School overview
                 </h3>
                 <p className="mt-2 max-w-md text-base leading-relaxed text-[#7A8899]">
-                  Cohort performance, teacher efficacy and risk-flag dashboards updated
-                  every 15 minutes.
+                  Today&apos;s attendance, outstanding fees, marks awaiting review,
+                  and the items that still need a decision.
                 </p>
               </div>
-              <span className="hidden shrink-0 rounded-full bg-[#D95338] px-4 py-1.5 font-mono text-[11px] font-semibold tracking-wider text-[#FBF9F5] sm:block">
-                Live · 15-min refresh
-              </span>
             </div>
 
             {/* Bar chart visual */}

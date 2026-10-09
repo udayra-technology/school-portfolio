@@ -5,12 +5,7 @@ import {
   CheckCircle2,
   Clock,
   Sparkles,
-  ShieldCheck,
   ChevronRight,
-  UserCheck,
-  Quote,
-  Zap,
-  Layers,
 } from "lucide-react";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
@@ -89,23 +84,6 @@ export function RolePageTemplate({ role }: { role: RoleItem }) {
                   </Link>
                 </div>
               </Reveal>
-            </div>
-
-            {/* Key Metrics Ribbon */}
-            <div className="mt-14 sm:mt-20 grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {role.keyMetrics.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-3xl border border-black/5 bg-white p-6 shadow-sm text-center"
-                >
-                  <p className="font-mono text-3xl sm:text-4xl font-bold tracking-tight text-[#2D5A4C]">
-                    {metric.value}
-                  </p>
-                  <p className="mt-2 text-xs sm:text-sm font-medium text-[#7A8899]">
-                    {metric.label}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -230,25 +208,7 @@ export function RolePageTemplate({ role }: { role: RoleItem }) {
           </div>
         </section>
 
-        {/* 5. Stakeholder Testimonial */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-            <Quote className="h-10 w-10 mx-auto text-[#D95338]/40" />
-            <blockquote className="mt-6 font-display text-2xl sm:text-3xl font-medium italic text-[#0B1320] leading-snug">
-              &ldquo;{role.testimonial.quote}&rdquo;
-            </blockquote>
-            <div className="mt-6">
-              <p className="font-display text-base font-bold text-[#0B1320]">
-                {role.testimonial.author}
-              </p>
-              <p className="text-xs text-[#7A8899]">
-                {role.testimonial.role} &middot; {role.testimonial.school}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* 6. Interconnected Modules */}
+        {/* Related modules */}
         <section className="py-16 sm:py-24 bg-[#F3ECE2]/40 border-t border-black/5">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
